@@ -9,6 +9,23 @@ module.exports = function(grunt) {
 
   // Grunt configuration
   grunt.initConfig({
+    htmlmin: {        
+      dist: {                               // Target
+        options: {                          // Target options
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {                            // Dictionary of files
+          'dist/index.html': 'index.html',  // 'destination': 'source'
+        }
+      },
+      dev: {                                // Another target
+        files: {
+          'dist/index.html': 'index.html',
+        }
+      }
+    },
+
     jshint: {
       all: ['js/perfmatters.js']
     },
