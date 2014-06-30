@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var ngrok = require('ngrok');
 
@@ -9,6 +9,10 @@ module.exports = function(grunt) {
 
   // Grunt configuration
   grunt.initConfig({
+    jshint: {
+      all: ['Gruntfile.js']
+    },
+
     pagespeed: {
       options: {
         nokey: true,
@@ -47,4 +51,5 @@ module.exports = function(grunt) {
 
   // Register default tasks
   grunt.registerTask('default', ['psi-ngrok']);
+  grunt.registerTask('travis', 'lint');
 };
