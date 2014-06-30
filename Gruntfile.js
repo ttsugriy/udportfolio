@@ -51,5 +51,5 @@ module.exports = function(grunt) {
 
   // Register default tasks
   grunt.registerTask('default', ['psi-ngrok']);
-  grunt.registerTask('travis', 'lint');
+  grunt.registerTask('travis', 'jshint');
 };
